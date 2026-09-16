@@ -1,1 +1,136 @@
-
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cristinaboboc-1975/Seminar-Machine-learning-in-Python/blob/Rezolvari/Tema_Laborator_1_ML_rezolvata.ipynb)\n",
+    "\n",
+    "# 📝 Tema de Casă — Laborator 1 (SOLUȚIE / REZOLVARE)\n",
+    "**Curs:** Machine Learning în Python  \n",
+    "**Subiect:** Manipularea datelor cu Python, NumPy și Pandas\n",
+    "\n",
+    "---\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 🔹 Cerința 1: Funcții Python & Logică (2 puncte)\n",
+    "Scrieți o funcție Python numită `calculeaza_nota_finala(t1, t2, proiect)` care primește 3 note și calculează media ponderată (30% Test 1, 30% Test 2, 40% Proiect) rotunjită la două zecimale."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Soluție Cerința 1\n",
+    "def calculeaza_nota_finala(t1, t2, proiect):\n",
+    "    nota = (t1 * 0.30) + (t2 * 0.30) + (proiect * 0.40)\n",
+    "    return round(nota, 2)\n",
+    "\n",
+    "# Testare funcție\n",
+    "nota_test = calculeaza_nota_finala(8.5, 7.0, 9.5)\n",
+    "print(f\"Nota finală calculată: {nota_test}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 🔹 Cerința 2: Operare cu Vectori în NumPy (3 puncte)\n",
+    "1. Statistica descriptivă pentru vectorul `ore_studiu`.\n",
+    "2. Filtrare booleană pentru studenții cu mai mult de 10 ore de studiu."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Soluție Cerința 2\n",
+    "import numpy as np\n",
+    "\n",
+    "ore_studiu = np.array([12, 5, 18, 8, 15, 3, 22, 10])\n",
+    "\n",
+    "# 1. Statistici descriptive\n",
+    "print(f\"Media: {np.mean(ore_studiu)}\")\n",
+    "print(f\"Deviația standard: {np.std(ore_studiu):.2f}\")\n",
+    "print(f\"Minim: {np.min(ore_studiu)}\")\n",
+    "print(f\"Maxim: {np.max(ore_studiu)}\")\n",
+    "\n",
+    "# 2 & 3. Filtrare booleană (> 10 ore)\n",
+    "masca_10_ore = ore_studiu > 10\n",
+    "ore_filtrate = ore_studiu[masca_10_ore]\n",
+    "print(f\"Ore de studiu peste 10: {ore_filtrate}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 🔹 Cerința 3: Creare și Manipulare Tabel Pandas (4 puncte)\n",
+    "1. Adăugare coloană `Nota_Finala`.\n",
+    "2. Adăugare coloană `Admis` (`Nota_Finala >= 6.0`).\n",
+    "3. Filtrare studenți admiși cu `Ore_Studiu > 10`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Soluție Cerința 3\n",
+    "import pandas as pd\n",
+    "\n",
+    "date_studenti = {\n",
+    "    'Nume': ['Ana', 'Bogdan', 'Cristian', 'Elena', 'Florin', 'Gabriela', 'Horia', 'Ioana'],\n",
+    "    'Test_1': [8.5, 5.0, 9.0, 6.5, 4.0, 9.5, 7.0, 8.0],\n",
+    "    'Test_2': [7.0, 6.0, 8.5, 5.5, 4.5, 10.0, 6.5, 8.5],\n",
+    "    'Proiect': [9.5, 7.0, 9.5, 8.0, 5.0, 9.5, 7.5, 9.0],\n",
+    "    'Ore_Studiu': [12, 5, 18, 8, 15, 3, 22, 10]\n",
+    "}\n",
+    "\n",
+    "df_studenti = pd.DataFrame(date_studenti)\n",
+    "\n",
+    "# 1. Calcul Nota_Finala folosind apply\n",
+    "df_studenti['Nota_Finala'] = df_studenti.apply(\n",
+    "    lambda row: calculeaza_nota_finala(row['Test_1'], row['Test_2'], row['Proiect']), \n",
+    "    axis=1\n",
+    ")\n",
+    "\n",
+    "# 2. Adăugare coloană Admis\n",
+    "df_studenti['Admis'] = df_studenti['Nota_Finala'] >= 6.0\n",
+    "\n",
+    "# 3. Filtrare (Admiși și Ore_Studiu > 10)\n",
+    "rezultat = df_studenti[(df_studenti['Admis'] == True) & (df_studenti['Ore_Studiu'] > 10)]\n",
+    "display(rezultat)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 🔹 Cerința 4: Întrebare de Reflexie / Analiză (1 punct)\n",
+    "**Răspuns Soluție:**\n",
+    "\n",
+    "Da, studenta **Gabriela** are o notă finală de **9.65**, deși are doar **3 ore** de studiu.\n",
+    "\n",
+    "* **Explicație din lumea reală:** Acest caz poate apărea dacă studentul posedă cunoștințe anterioare solide (de exemplu, cunoștea deja Python din liceu sau proiecte personale) sau are o capacitate foarte mare de asimilare rapidă a informației.\n",
+    "* **Impact în Machine Learning:** În ML, acest punct este un **Outlier** (valoare aberantă). Un algoritm bazat pe regresie liniară poate fi distorsionat de această valoare, concluzionând eronat că un număr mic de ore de studiu poate duce la note maxime, scăzând astfel importanța variabilei `Ore_Studiu` în predicția finală."
+   ]
+  }
+ ],
+ "metadata": {
+  "language_info": {
+   "name": "python"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
