@@ -9,6 +9,7 @@ Notebook-urile pot fi deschise și rulate direct în **Google Colab**, folosind 
 | **LP 1** | Bazele limbajului Python pentru ML | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cristinaboboc-1975/Seminar-Machine-learning-in-Python/blob/main/LP1_Machine_Learning_in_Python_NOU.ipynb) |
 | **LP 1 – Tema** | Tema Laborator 1 ML | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cristinaboboc-1975/Seminar-Machine-learning-in-Python/blob/main/Tema_Laborator_1_ML.ipynb) |
 | **LP 2** | Machine Learning in Python – Laborator 2 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cristinaboboc-1975/Seminar-Machine-learning-in-Python/blob/main/LP2_Machine_Learning_in_Python_NOU.ipynb) |
+| **LP 2** |  Tema Laborator 2 ML | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cristinaboboc-1975/Seminar-Machine-learning-in-Python/blob/main/LP2_Exercitiu_Studenti (1).ipynb) |
 
 ## Instrucțiuni pentru studenți
 
