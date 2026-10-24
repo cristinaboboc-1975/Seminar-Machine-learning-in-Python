@@ -13,7 +13,7 @@ Notebook-urile pot fi deschise și rulate direct în **Google Colab**, folosind 
 | **LP 3** | Machine Learning in Python – Laborator 3 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cristinaboboc-1975/Seminar-Machine-learning-in-Python/blob/main/LP3_Machine_Learning_in_Python.ipynb) |
 | **LP 3** |  Tema Laborator 3 ML | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cristinaboboc-1975/Seminar-Machine-learning-in-Python/blob/main/Tema_Laborator_3_ML.ipynb) |
 | **LP 4** | Machine Learning in Python – Laborator 4 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cristinaboboc-1975/Seminar-Machine-learning-in-Python/blob/main/LP4_Machine_Learning_in_Python.ipynb) |
-| **Curs 5** | Machine Learning in Python – Curs 5 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cristinaboboc-1975/Seminar-Machine-learning-in-Python/blob/main/Curs_Ridge_si_Lasso.ipynb) |
+| **Curs 5** | Machine Learning in Python – Curs 5 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cristinaboboc-1975/Seminar-Machine-learning-in-Python/blob/main/Curs_Ridge_si_Lasso (1).ipynb) |
 
 
 
